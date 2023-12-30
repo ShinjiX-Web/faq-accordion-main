@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution Link](https://your-solution-url.com)
-- Live Site URL: [Live Link](https://your-live-site-url.com)
+- Solution URL: [Solution Link](https://github.com/ShinjiX-Web/faq-accordion-main)
+- Live Site URL: [Live Link](https://shinjix-web.github.io/faq-accordion-main/)
 
 
 ### Built with
