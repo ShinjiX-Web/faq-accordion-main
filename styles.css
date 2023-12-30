@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+  font-family: 'Work Sans', sans-serif;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background: url(./imgs/background-pattern-desktop.svg) var(--lightPink);
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: "Work Sans", Arial, Helvetica, sans-serif;
+}
+
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+:root {
+    --white: #ffffff;
+    --lightPink: #f9f0ff;
+    --darkPurple: #2f1533;
+    --grayishPurple: #A22FD9;
+    --randomColor: #928394;
+}
+
+/* Custom CSS */
+
+.container {
+    padding: 30px 50px;
+    border-radius: 20px;
+    margin: 0 300px;
+    background-color: var(--white);
+    min-width: 400px;
+}
+
+.main-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url('./assets/images/background-pattern-desktop.svg') var(--lightPink);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.header {
+    display: flex;
+    column-gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.heading {
+    color: var(--darkPurple);
+    font-size: 55px;
+}
+
+details {
+  margin-bottom: 20px;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  overflow: hidden;
+  transition: border-color 0.3s ease-in-out, max-height 0.5s ease-out; /* Added max-height transition */
+}
+
+details[open] {
+  border-color: transparent; /* Hide the border when details is open */
+  max-height: none; /* Adjust this value to fit your content */
+}
+
+summary {
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--darkPurple);
+  padding-bottom: 25px;
+}
+
+summary::-webkit-details-marker { 
+    display: none; 
+}
+
+p {
+  font-size: 16px;
+  color: var(--randomColor);
+}
+
+@media (max-width: 1400px) {
+    .container {
+        padding: 30px 40px;
+    }
+}
